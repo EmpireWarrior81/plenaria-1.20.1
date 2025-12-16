@@ -74,6 +74,15 @@ public class ModItemGroups {
                         entries.add(ModBlocks.AVOCADO_SAPLING);
                         entries.add(ModBlocks.AVOCADO_LEAVES);
                         entries.add(ModBlocks.FRUITING_AVOCADO_LEAVES);
+                        entries.add(ModItems.CORN_KERNELS);
+                        entries.add(ModItems.EGGPLANT_SEEDS);
+                        entries.add(ModItems.CUCUMBER_SEEDS);
+                        entries.add(ModBlocks.AVOCADO_CRATE);
+                        entries.add(ModBlocks.CORN_COB_CRATE);
+                        entries.add(ModBlocks.CUCUMBER_CRATE);
+                        entries.add(ModBlocks.EGGPLANT_CRATE);
+                        entries.add(ModBlocks.PICKLE_CRATE);
+                        entries.add(ModBlocks.WHITE_EGGPLANT_CRATE);
 
                     }).build());
 

@@ -53,8 +53,7 @@ public class ModBlocks {
     public static final Block EGGPLANT_PARMESAN_BLOCK = registerBlock("eggplant_parmesan_block",
             new EggplantFeastBlock(
                     FabricBlockSettings.copyOf(vectorwing.farmersdelight.common.registry.ModBlocks.ROAST_CHICKEN_BLOCK.get()),
-                    () -> ModItems.EGGPLANT_PARMESAN, true
-            ));
+                    () -> ModItems.EGGPLANT_PARMESAN, true));
 
 
     public static final Block AVOCADO_LOG = registerBlock("avocado_log",
@@ -76,6 +75,19 @@ public class ModBlocks {
             new FruitingLeaves(FabricBlockSettings.copyOf(Blocks.JUNGLE_LEAVES)
                     .nonOpaque()
                     .ticksRandomly()));
+
+    public static final Block AVOCADO_CRATE = registerBlock("avocado_crate",
+            new Block(FabricBlockSettings.copyOf(vectorwing.farmersdelight.common.registry.ModBlocks.CARROT_CRATE.get())));
+    public static final Block CORN_COB_CRATE = registerBlock("corn_cob_crate",
+            new Block(FabricBlockSettings.copyOf(vectorwing.farmersdelight.common.registry.ModBlocks.CARROT_CRATE.get())));
+    public static final Block EGGPLANT_CRATE = registerBlock("eggplant_crate",
+            new Block(FabricBlockSettings.copyOf(vectorwing.farmersdelight.common.registry.ModBlocks.CARROT_CRATE.get())));
+    public static final Block CUCUMBER_CRATE = registerBlock("cucumber_crate",
+            new Block(FabricBlockSettings.copyOf(vectorwing.farmersdelight.common.registry.ModBlocks.CARROT_CRATE.get())));
+    public static final Block PICKLE_CRATE = registerBlock("pickle_crate",
+            new Block(FabricBlockSettings.copyOf(vectorwing.farmersdelight.common.registry.ModBlocks.CARROT_CRATE.get())));
+    public static final Block WHITE_EGGPLANT_CRATE = registerBlock("white_eggplant_crate",
+            new Block(FabricBlockSettings.copyOf(vectorwing.farmersdelight.common.registry.ModBlocks.CARROT_CRATE.get())));
 
 
      private static Block registerBlock(String name, Block block) {

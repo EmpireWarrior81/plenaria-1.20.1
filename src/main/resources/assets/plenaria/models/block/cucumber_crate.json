@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "plenaria:block/cucumber_crate_side",
+    "bottom": "plenaria:block/crate_bottom",
+    "top": "plenaria:block/cucumber_crate_top"
+  }
+}
