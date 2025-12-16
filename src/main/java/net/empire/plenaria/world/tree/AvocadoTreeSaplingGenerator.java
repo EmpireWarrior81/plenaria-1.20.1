@@ -7,9 +7,7 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import org.jetbrains.annotations.Nullable;
 
-/**
- * Return the configured feature key for avocado sapling -> tree.
- */
+
 public class AvocadoTreeSaplingGenerator extends SaplingGenerator {
     @Nullable
     @Override

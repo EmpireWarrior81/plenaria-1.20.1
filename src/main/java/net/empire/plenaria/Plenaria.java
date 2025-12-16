@@ -29,6 +29,8 @@ public class Plenaria implements ModInitializer {
         ModItems.registerModItems();
 
         ModBiomeGeneration.generateBiomes();
+
+        //TODO This is for datagen option
       //  ModWorldGen.init();
 
 

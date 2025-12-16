@@ -80,7 +80,6 @@ public class ModBlocks {
 
      private static Block registerBlock(String name, Block block) {
          Block registered = Registry.register(Registries.BLOCK, new Identifier(Plenaria.MOD_ID, name), block);
-         // register block item for everything except specialized blocks if you want to hide them
          Registry.register(Registries.ITEM, new Identifier(Plenaria.MOD_ID, name), new BlockItem(registered, new Item.Settings()));
          return registered;
      }
@@ -89,7 +88,6 @@ public class ModBlocks {
         Registry.register(Registries.BLOCK, new Identifier(Plenaria.MOD_ID, name), block);
         return block;
     }
-
 
 
     private static Item registerBlockItem(String name, Block block) {

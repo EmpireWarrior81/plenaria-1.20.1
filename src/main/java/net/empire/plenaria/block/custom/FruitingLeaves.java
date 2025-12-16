@@ -42,7 +42,7 @@ public class FruitingLeaves extends LeavesBlock implements Fertilizable {
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if (state.get(DISTANCE) == 7 && !state.get(PERSISTENT)) {
-            // decay
+
             this.dropStacks(state, world, pos);
             world.removeBlock(pos, false);
             return;
@@ -53,7 +53,6 @@ public class FruitingLeaves extends LeavesBlock implements Fertilizable {
         }
     }
 
-    // Player right-click (use) to pick when ripe
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         int age = state.get(AGE);
@@ -71,11 +70,9 @@ public class FruitingLeaves extends LeavesBlock implements Fertilizable {
 
                 world.playSound(null, pos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1.0f, 0.8f + world.random.nextFloat() * 0.4f);
 
-                // reset age to 1 (so it regrows)
                 BlockState next = state.with(AGE, 0);
                 world.setBlockState(pos, next, 2);
 
-                // emit block change game event for Sculk / sensors
                 world.emitGameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Emitter.of(player, next));
             }
             return ActionResult.success(world.isClient);
@@ -83,7 +80,6 @@ public class FruitingLeaves extends LeavesBlock implements Fertilizable {
         return super.onUse(state, world, pos, player, hand, hit);
     }
 
-    // Fertilizable (bonemeal)
     @Override
     public boolean isFertilizable(WorldView world, BlockPos pos, BlockState state, boolean isClient) {
         return state.get(AGE) < MAX_AGE;

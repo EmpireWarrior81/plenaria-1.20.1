@@ -21,6 +21,9 @@ import net.minecraft.sound.SoundCategory;
  * Avocado pit block — small shape, behaves like a sapling (uses the same SaplingGenerator).
  * Extends SaplingBlock so placing a pit and bonemealing it will grow a tree via the sapling generator.
  */
+
+//TODO Gotta fix this bit
+
 public class AvocadoPitBlock extends SaplingBlock {
     private static final VoxelShape SHAPE_PIT = VoxelShapes.cuboid(6.0/16.0, 0.0, 6.0/16.0, 10.0/16.0, 3.0/16.0, 10.0/16.0);
 

@@ -15,6 +15,8 @@ import net.minecraft.world.gen.placementmodifier.SquarePlacementModifier;
 
 import java.util.List;
 
+//TODO This is for datagen option
+
 public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> AVOCADO_TREE_PLACED =
             registerKey("avocado_tree_placed");
@@ -33,7 +35,6 @@ public class ModPlacedFeatures {
         var cornDryConfigured = configuredLookup.getOrThrow(ModConfiguredFeatures.PATCH_WILD_CORN_DRY);
 
 
-        // ✔ CORRECTE tree modifiers die ALTIJD werken in 1.20.1
         List<PlacementModifier> modifiers = VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
                 PlacedFeatures.createCountExtraModifier(0, 0.1f, 1),
                 ModBlocks.AVOCADO_SAPLING
@@ -45,7 +46,7 @@ public class ModPlacedFeatures {
         );
 
         List<PlacementModifier> cornModifiers = List.of(
-                RarityFilterPlacementModifier.of(100), // hoe zeldzaam (lager = meer)
+                RarityFilterPlacementModifier.of(100), //Note for myself, lower is more, higher is less
                 SquarePlacementModifier.of(),
                 PlacedFeatures.WORLD_SURFACE_WG_HEIGHTMAP,
                 BiomePlacementModifier.of()

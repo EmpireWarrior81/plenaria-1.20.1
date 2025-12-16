@@ -20,10 +20,9 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> PATCH_WILD_CORN = registerKey("patch_wild_corn");
     public static final RegistryKey<ConfiguredFeature<?, ?>> PATCH_WILD_CORN_DRY = registerKey("patch_wild_corn_dry");
 
-
+    //TODO This is for datagen option
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
-        // tree feature: jungle-like logs + weighted leaves (some fruiting leaves)
         TreeFeatureConfig config = new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.AVOCADO_LOG),
                 new StraightTrunkPlacer(3, 2, 0),

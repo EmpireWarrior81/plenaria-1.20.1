@@ -1,5 +1,7 @@
 package net.empire.plenaria.world;
 
+//TODO This is for datagen option
+
 /*
 import net.fabricmc.fabric.api.event.registry.DynamicRegistrySetupCallback;
 import net.minecraft.registry.RegistryKeys;

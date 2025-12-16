@@ -21,6 +21,7 @@ public class ModBiomeGeneration {
                 ModPlacedFeatures.PATCH_WILD_CORN_DRY_PLACED
         );
 
+//TODO This needs to be added, when leave decay is fixed + placement of trees needs to be better
 
 /*
         BiomeModifications.addFeature(

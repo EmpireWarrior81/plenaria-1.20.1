@@ -15,5 +15,8 @@ public class PlenariaDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(ModModelProvider::new);
         pack.addProvider(ModRecipeProvider::new);
 
+
+        //TODO Needs to add the datagen options!
+
 	}
 }

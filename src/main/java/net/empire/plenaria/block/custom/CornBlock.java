@@ -43,9 +43,6 @@ public class CornBlock extends PlantBlock implements Fertilizable {
         builder.add(AGE, SUPPORTING);
     }
 
-    // ------------------------------
-    //      BASIC PROPERTIES
-    // ------------------------------
 
     public int getMaxAge() {
         return 3;
@@ -64,18 +61,10 @@ public class CornBlock extends PlantBlock implements Fertilizable {
         return new ItemStack(ModItems.CORN_KERNELS);
     }
 
-    // ------------------------------
-    //           SHAPE
-    // ------------------------------
-
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
         return SHAPES[state.get(AGE)];
     }
-
-    // ------------------------------
-    //        PLACEMENT RULES
-    // ------------------------------
 
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
@@ -95,10 +84,6 @@ public class CornBlock extends PlantBlock implements Fertilizable {
         return state;
     }
 
-    // ------------------------------
-    //       GROWTH (RANDOM TICK)
-    // ------------------------------
-
     @Override
     public boolean hasRandomTicks(BlockState state) {
         return true;
@@ -112,14 +97,14 @@ public class CornBlock extends PlantBlock implements Fertilizable {
         int age = this.getAge(state);
 
         if (age < this.getMaxAge()) {
-            // Grow bottom part
+
             if (random.nextFloat() < 0.25f) {
                 world.setBlockState(pos, state.with(AGE, age + 1), Block.NOTIFY_LISTENERS);
             }
             return;
         }
 
-        // If fully grown → try to grow upper part
+
         if (world.isAir(pos.up())) {
             BlockState upper = ModBlocks.CORN_UPPER.getDefaultState();
             if (upper.canPlaceAt(world, pos.up())) {
@@ -129,16 +114,10 @@ public class CornBlock extends PlantBlock implements Fertilizable {
         }
     }
 
-    // ------------------------------
-    //      BONE MEAL LOGIC
-    // ------------------------------
-
-
     @Override
     public boolean isFertilizable(WorldView world, BlockPos pos, BlockState state, boolean isClient) {
         if (state.get(AGE) < this.getMaxAge()) return true;
 
-        // If bottom is max age, check upper
         BlockState above = world.getBlockState(pos.up());
         if (above.getBlock() instanceof CornUpperBlock upper) {
             return above.get(CornUpperBlock.AGE) < upper.getMaxAge();
@@ -157,14 +136,12 @@ public class CornBlock extends PlantBlock implements Fertilizable {
     public void grow(ServerWorld world, Random random, BlockPos pos, BlockState state) {
         int age = this.getAge(state);
 
-        // Grow bottom
         if (age < this.getMaxAge()) {
             int newAge = Math.min(this.getMaxAge(), age + random.nextBetween(1, 2));
             world.setBlockState(pos, state.with(AGE, newAge), Block.NOTIFY_LISTENERS);
             return;
         }
 
-        // Otherwise grow upper
         BlockState upper = world.getBlockState(pos.up());
         if (upper.getBlock() instanceof CornUpperBlock) {
             CornUpperBlock upperBlock = (CornUpperBlock) upper.getBlock();

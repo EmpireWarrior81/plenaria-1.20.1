@@ -15,3 +15,4 @@ public class AvocadoPitGenerator extends SaplingGenerator {
         return ModConfiguredFeatures.AVOCADO_TREE;
     }
 }
+//TODO This needs fixing too, point is that it should be a sapling

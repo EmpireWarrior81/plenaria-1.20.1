@@ -18,12 +18,10 @@ public class BowlReturningFoodItem extends Item {
         ItemStack result = super.finishUsing(stack, world, user);
 
         if (!world.isClient) {
-            // als stack op is, geef bowl terug
             if (stack.isEmpty()) {
                 return new ItemStack(Items.BOWL);
             }
 
-            // anders drop / geef bowl tenzij Creative mode
             if (user instanceof PlayerEntity player && !player.getAbilities().creativeMode) {
                 player.giveItemStack(new ItemStack(Items.BOWL));
             }
