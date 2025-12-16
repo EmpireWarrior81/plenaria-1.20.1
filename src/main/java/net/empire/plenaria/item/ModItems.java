@@ -83,7 +83,7 @@ public class  ModItems {
     public static final Item CALAMARI_ROLL = registerItem("calamari_roll",
             new Item(new FabricItemSettings().food(ModFoods.CALAMARI_ROLL)));
 
-    // MEALS & SNACKS
+
     public static final Item CORN_DOUGH = registerItem("corn_dough",
             new Item(new FabricItemSettings().food(ModFoods.CORN_DOUGH)));
     public static final Item TORTILLA = registerItem("tortilla",
@@ -123,6 +123,8 @@ public class  ModItems {
     public static final Item FISH_TACO = registerItem("fish_taco",
             new Item(new FabricItemSettings().food(ModFoods.FISH_TACO)));
 
+
+    //TODO In near future need to delete these two or add support for the knife with my other mod
 
     public static final Item BRONZE_INGOT =registerItem("bronze_ingot",
             new Item(new FabricItemSettings()));
