@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "plenaria:avocado_wood",
+    "plenaria:avocado_log",
+    "plenaria:avocado_crate",
+    "plenaria:cucumber_crate",
+    "plenaria:pickle_crate",
+    "plenaria:corn_cob_crate",
+    "plenaria:eggplant_crate",
+    "plenaria:white_eggplant_crate"
+  ]
+}
