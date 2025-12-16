@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "plenaria:block/eggplants_stage0"
+  }
+}

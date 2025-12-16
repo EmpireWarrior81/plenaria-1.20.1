@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "plenaria:block/corn_upper_stage0"
+  }
+}

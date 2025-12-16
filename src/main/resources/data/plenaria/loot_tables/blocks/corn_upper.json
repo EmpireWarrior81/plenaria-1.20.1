@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "farmersdelight:straw",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "plenaria:corn_upper",
+              "properties": { "age": "3" }
+            },
+            {
+              "condition": "minecraft:match_tool",
+              "predicate": {
+                "tag": "farmersdelight:tools/knives"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "plenaria:corn_cob",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "plenaria:corn_upper",
+              "properties": { "age": "3" }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "functions": [
+    { "function": "minecraft:explosion_decay" }
+  ]
+}

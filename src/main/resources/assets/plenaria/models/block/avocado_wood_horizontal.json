@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "plenaria:block/avocado_log",
+    "side": "plenaria:block/avocado_log"
+  }
+}

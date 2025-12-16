@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "plenaria:block/corn_stage3"
+  }
+}

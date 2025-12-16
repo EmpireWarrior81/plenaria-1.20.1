@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "plenaria:block/avocado_leaves"
+  }
+}

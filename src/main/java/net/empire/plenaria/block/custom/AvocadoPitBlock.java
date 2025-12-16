@@ -1,0 +1,36 @@
+package net.empire.plenaria.block.custom;
+
+import net.empire.plenaria.world.ModTreeGrowers;
+import net.minecraft.block.SaplingBlock;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.AbstractBlock.Settings;
+import net.minecraft.block.sapling.SaplingGenerator;
+import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
+import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
+import net.minecraft.util.math.random.Random;
+import net.minecraft.world.WorldView;
+import net.minecraft.block.ShapeContext;
+import net.minecraft.sound.SoundEvents;
+import net.minecraft.sound.SoundCategory;
+
+/**
+ * Avocado pit block — small shape, behaves like a sapling (uses the same SaplingGenerator).
+ * Extends SaplingBlock so placing a pit and bonemealing it will grow a tree via the sapling generator.
+ */
+public class AvocadoPitBlock extends SaplingBlock {
+    private static final VoxelShape SHAPE_PIT = VoxelShapes.cuboid(6.0/16.0, 0.0, 6.0/16.0, 10.0/16.0, 3.0/16.0, 10.0/16.0);
+
+    public AvocadoPitBlock(SaplingGenerator generator, Settings settings) {
+        super(generator, settings);
+    }
+
+    @Override
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        return SHAPE_PIT;
+    }
+
+}

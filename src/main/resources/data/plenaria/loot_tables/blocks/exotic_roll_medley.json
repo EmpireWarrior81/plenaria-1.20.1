@@ -1,0 +1,43 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "name": "drop_exotic_roll_or_plate",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "plenaria:exotic_roll_medley"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "plenaria:exotic_roll_medley",
+          "properties": {
+            "servings": "8"
+          }
+        }
+      ]
+    },
+    {
+      "name": "drop_bowl_when_empty",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bowl"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "plenaria:exotic_roll_medley",
+          "properties": {
+            "servings": "0"
+          }
+        }
+      ]
+    }
+  ]
+}

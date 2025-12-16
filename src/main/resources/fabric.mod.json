@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "plenaria",
+	"version": "${version}",
+	"name": "Plenaria",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"EmpireWarrior81"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/plenaria/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "net.empire.plenaria.Plenaria"
+		],
+      "client": [
+        "net.empire.plenaria.PlenariaClient"
+		],
+		"fabric-datagen": [
+          "net.empire.plenaria.PlenariaDataGenerator"
+		]
+	},
+	"mixins": [
+		"plenaria.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*",
+        "farmersdelight": "*"
+}
+}

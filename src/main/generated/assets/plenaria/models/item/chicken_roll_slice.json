@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "plenaria:item/chicken_roll_slice"
+  }
+}
