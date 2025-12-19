@@ -19,6 +19,8 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> AVOCADO_TREE = registerKey("avocado_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> PATCH_WILD_CORN = registerKey("patch_wild_corn");
     public static final RegistryKey<ConfiguredFeature<?, ?>> PATCH_WILD_CORN_DRY = registerKey("patch_wild_corn_dry");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> PATCH_WILD_EGGPLANTS = registerKey("patch_wild_eggplants");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> PATCH_WILD_CUCUMBERS = registerKey("patch_wild_cucumbers");
 
     //TODO This is for datagen option
 
@@ -62,6 +64,34 @@ public class ModConfiguredFeatures {
                 );
 
         context.register(PATCH_WILD_CORN_DRY, new ConfiguredFeature<>(Feature.RANDOM_PATCH, cornDryConfig));
+
+        RandomPatchFeatureConfig eggplantsConfig = new RandomPatchFeatureConfig(
+                32,
+                5,
+                2,
+                PlacedFeatures.createEntry(
+                        Feature.SIMPLE_BLOCK,
+                        new SimpleBlockFeatureConfig(
+                                BlockStateProvider.of(ModBlocks.WILD_EGGPLANTS)
+                        )
+                )
+        );
+
+        context.register(PATCH_WILD_EGGPLANTS, new ConfiguredFeature<>(Feature.RANDOM_PATCH, eggplantsConfig));
+
+        RandomPatchFeatureConfig cucumbersConfig = new RandomPatchFeatureConfig(
+                32,
+                5,
+                2,
+                PlacedFeatures.createEntry(
+                        Feature.SIMPLE_BLOCK,
+                        new SimpleBlockFeatureConfig(
+                                BlockStateProvider.of(ModBlocks.WILD_CUCUMBERS)
+                        )
+                )
+        );
+
+        context.register(PATCH_WILD_CUCUMBERS, new ConfiguredFeature<>(Feature.RANDOM_PATCH, cucumbersConfig));
 
 
 

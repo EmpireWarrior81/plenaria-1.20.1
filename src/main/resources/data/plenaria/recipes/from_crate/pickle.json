@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "plenaria:pickle_crate"
+    }
+  ],
+  "result": {
+    "item": "plenaria:pickle",
+    "count": 9
+  }
+}

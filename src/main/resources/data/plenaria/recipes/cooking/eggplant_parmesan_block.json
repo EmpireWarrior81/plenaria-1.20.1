@@ -1,0 +1,35 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "tag": "plenaria:regular_eggplants"
+    },
+    {
+      "tag": "c:milks"
+    },
+    {
+      "tag": "c:eggs"
+    },
+    {
+      "item": "farmersdelight:raw_pasta"
+    },
+    {
+      "item": "farmersdelight:tomato_sauce"
+    },
+    {
+      "tag": "c:bread/wheat"
+    }
+
+  ],
+  "result":
+  {
+    "item": "plenaria:eggplant_parmesan_block",
+    "count": 1
+  },
+  "container":
+  {
+    "item": "minecraft:bowl"
+  },
+  "experience": 2.0,
+  "cookingtime": 400
+}

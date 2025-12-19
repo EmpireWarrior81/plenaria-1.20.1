@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "plenaria:wild_corn"
+    }
+  ],
+  "result": [
+    {
+      "count": 3,
+      "item": "plenaria:corn_kernels"
+    }
+  ],
+  "tool": {
+    "tag": "c:tools/knives"
+  }
+}

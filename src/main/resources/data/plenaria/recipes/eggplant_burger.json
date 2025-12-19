@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:bread"
+    },
+    {
+      "tag": "plenaria:smoked_regular_eggplants"
+    },
+    {
+      "tag": "c:salad_ingredients/cabbage"
+    },
+    {
+      "tag": "c:crops/tomato"
+    }
+  ],
+  "result": {
+    "item": "plenaria:eggplant_burger",
+    "count": 1
+  }
+}

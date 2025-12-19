@@ -9,8 +9,11 @@ public class ModBiomeGeneration {
 
     public static void generateBiomes() {
 
+
+        //wild_patches
+
         BiomeModifications.addFeature(
-                BiomeSelectors.includeByKey(BiomeKeys.PLAINS),
+                BiomeSelectors.includeByKey(BiomeKeys.PLAINS, BiomeKeys.SUNFLOWER_PLAINS),
                 GenerationStep.Feature.VEGETAL_DECORATION,
                 ModPlacedFeatures.PATCH_WILD_CORN_PLACED
         );
@@ -21,15 +24,28 @@ public class ModBiomeGeneration {
                 ModPlacedFeatures.PATCH_WILD_CORN_DRY_PLACED
         );
 
-//TODO This needs to be added, when leave decay is fixed + placement of trees needs to be better
-
-/*
         BiomeModifications.addFeature(
-                BiomeSelectors.foundInOverworld(),
+                BiomeSelectors.includeByKey(BiomeKeys.JUNGLE, BiomeKeys.BAMBOO_JUNGLE, BiomeKeys.SPARSE_JUNGLE),
+                GenerationStep.Feature.VEGETAL_DECORATION,
+                ModPlacedFeatures.PATCH_WILD_EGGPLANTS_PLACED
+        );
+
+        BiomeModifications.addFeature(
+                BiomeSelectors.includeByKey(BiomeKeys.SWAMP, BiomeKeys.MANGROVE_SWAMP),
+                GenerationStep.Feature.VEGETAL_DECORATION,
+                ModPlacedFeatures.PATCH_WILD_CUCUMBERS_PLACED
+        );
+
+
+        //trees
+
+        BiomeModifications.addFeature(
+                BiomeSelectors.includeByKey(BiomeKeys.SPARSE_JUNGLE, BiomeKeys.JUNGLE,
+                        BiomeKeys.BAMBOO_JUNGLE),
                 GenerationStep.Feature.VEGETAL_DECORATION,
                 ModPlacedFeatures.AVOCADO_TREE_PLACED
         );
-*/
+
 
     }
 }

@@ -15,5 +15,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     public void generate(Consumer<RecipeJsonProvider> consumer) {
 
 
+
+
     }
 }

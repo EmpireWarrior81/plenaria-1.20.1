@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " % ",
+    "@?@",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:dried_kelp"
+    },
+    "@": {
+      "item": "farmersdelight:cooked_rice"
+    },
+    "?": {
+      "tag": "plenaria:avocados"
+    },
+    "%": {
+      "tag": "plenaria:cucumbers"
+    }
+  },
+  "result": {
+    "item": "plenaria:midori_roll",
+    "count": 1
+  }
+}

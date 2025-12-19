@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "plenaria:tortilla"
+    },
+    {
+      "tag": "c:foods/cooked_fishes"
+    },
+    {
+      "tag": "c:salad_ingredients/cabbage"
+    },
+    {
+      "tag": "c:crops/tomato"
+    }
+  ],
+  "result": {
+    "item": "plenaria:fish_taco",
+    "count": 1
+  }
+}

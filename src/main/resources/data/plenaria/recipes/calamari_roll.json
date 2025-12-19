@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:dried_kelp"
+    },
+    {
+      "item": "farmersdelight:cooked_rice"
+    },
+    {
+      "item": "plenaria:raw_calamari"
+    },
+    {
+      "item": "plenaria:raw_calamari"
+    }
+  ],
+  "result": {
+    "item": "plenaria:calamari_roll",
+    "count": 2
+  }
+}

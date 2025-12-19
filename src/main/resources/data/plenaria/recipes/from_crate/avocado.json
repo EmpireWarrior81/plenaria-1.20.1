@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "plenaria:avocado_crate"
+    }
+  ],
+  "result": {
+    "item": "plenaria:avocado",
+    "count": 9
+  }
+}

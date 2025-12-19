@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "plenaria:corn_cob"
+    },
+    {
+      "item": "plenaria:corn_cob"
+    },
+    {
+      "item": "plenaria:corn_cob"
+    }
+  ],
+  "result": {
+    "item": "plenaria:corn_dough",
+    "count": 3
+  }
+}

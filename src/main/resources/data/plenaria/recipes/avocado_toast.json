@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "plenaria:avocados"
+    },
+    {
+      "tag": "plenaria:avocados"
+    },
+    {
+      "item": "minecraft:bread"
+    }
+  ],
+  "result": {
+    "item": "plenaria:avocado_toast",
+    "count": 4
+  }
+}

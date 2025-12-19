@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "plenaria:cucumber_crate"
+    }
+  ],
+  "result": {
+    "item": "plenaria:cucumber",
+    "count": 9
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " % ",
+    "@?@",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:dried_kelp"
+    },
+    "@": {
+      "item": "farmersdelight:cooked_rice"
+    },
+    "?": {
+      "tag": "plenaria:cooked_chickens"
+    },
+    "%": {
+      "item": "minecraft:beetroot"
+    }
+  },
+  "result": {
+    "item": "plenaria:chicken_roll",
+    "count": 1
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "plenaria:tortilla"
+    },
+    {
+      "tag": "plenaria:cooked_chickens"
+    },
+    {
+      "item": "farmersdelight:tomato_sauce"
+    },
+    {
+      "tag": "plenaria:cucumbers"
+    },
+    {
+      "item": "plenaria:corn_cob"
+    }
+  ],
+  "result": {
+    "item": "plenaria:chicken_taco",
+    "count": 1
+  }
+}

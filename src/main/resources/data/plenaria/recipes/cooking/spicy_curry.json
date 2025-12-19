@@ -1,0 +1,35 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "item": "minecraft:blaze_powder"
+    },
+    {
+      "item": "farmersdelight:tomato_sauce"
+    },
+    {
+      "item": "farmersdelight:cooked_rice"
+    },
+    {
+      "tag": "c:crops/onion"
+    },
+    {
+      "tag": "plenaria:cooked_chickens"
+    },
+    {
+      "tag": "c:milks"
+    }
+
+  ],
+  "result":
+  {
+    "item": "plenaria:spicy_curry",
+    "count": 1
+  },
+  "container":
+  {
+    "item": "minecraft:bowl"
+  },
+  "experience": 2.0,
+  "cookingtime": 350
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "plenaria:corn_dough"
+    },
+    {
+      "item": "plenaria:corn_dough"
+    },
+    {
+      "tag": "plenaria:avocados"
+    },
+    {
+      "tag": "c:crops/tomato"
+    },
+    {
+      "tag": "c:crops/onion"
+    }
+  ],
+  "result": {
+    "item": "plenaria:empanada",
+    "count": 2
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "plenaria:eggplant"
+    }
+  ],
+  "result": [
+    {
+      "count": 2,
+      "item": "plenaria:cut_eggplant"
+    }
+  ],
+  "tool": {
+    "tag": "c:tools/knives"
+  }
+}

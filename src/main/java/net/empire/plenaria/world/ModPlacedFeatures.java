@@ -27,12 +27,20 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> PATCH_WILD_CORN_DRY_PLACED =
             registerKey("patch_wild_corn_dry_placed");
 
+    public static final RegistryKey<PlacedFeature> PATCH_WILD_EGGPLANTS_PLACED =
+            registerKey("patch_wild_cucumbers_placed");
+
+    public static final RegistryKey<PlacedFeature> PATCH_WILD_CUCUMBERS_PLACED =
+            registerKey("patch_wild_cucumbers_placed");
+
     public static void bootstrap(Registerable<PlacedFeature> context) {
 
         var configuredLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
         var avocadoConfigured = configuredLookup.getOrThrow(ModConfiguredFeatures.AVOCADO_TREE);
         var cornConfigured = configuredLookup.getOrThrow(ModConfiguredFeatures.PATCH_WILD_CORN);
         var cornDryConfigured = configuredLookup.getOrThrow(ModConfiguredFeatures.PATCH_WILD_CORN_DRY);
+        var eggplantsConfigured = configuredLookup.getOrThrow(ModConfiguredFeatures.PATCH_WILD_EGGPLANTS);
+        var cucumbersConfigured = configuredLookup.getOrThrow(ModConfiguredFeatures.PATCH_WILD_CUCUMBERS);
 
 
         List<PlacementModifier> modifiers = VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
@@ -67,6 +75,30 @@ public class ModPlacedFeatures {
         context.register(
                 PATCH_WILD_CORN_DRY_PLACED,
                 new PlacedFeature(cornDryConfigured, cornDryModifiers)
+        );
+
+        List<PlacementModifier> eggplantsModifiers = List.of(
+                RarityFilterPlacementModifier.of(32),
+                SquarePlacementModifier.of(),
+                PlacedFeatures.WORLD_SURFACE_WG_HEIGHTMAP,
+                BiomePlacementModifier.of()
+        );
+
+        context.register(
+                PATCH_WILD_EGGPLANTS_PLACED,
+                new PlacedFeature(eggplantsConfigured, eggplantsModifiers)
+        );
+
+        List<PlacementModifier> cucumbersModifiers = List.of(
+                RarityFilterPlacementModifier.of(32),
+                SquarePlacementModifier.of(),
+                PlacedFeatures.WORLD_SURFACE_WG_HEIGHTMAP,
+                BiomePlacementModifier.of()
+        );
+
+        context.register(
+                PATCH_WILD_CUCUMBERS_PLACED,
+                new PlacedFeature(cucumbersConfigured, cucumbersModifiers)
         );
 
 

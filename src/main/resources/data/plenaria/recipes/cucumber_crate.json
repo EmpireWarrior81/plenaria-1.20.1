@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "plenaria:cucumber"
+    }
+  },
+  "result": {
+    "item": "plenaria:cucumber_crate",
+    "count": 1
+  }
+}

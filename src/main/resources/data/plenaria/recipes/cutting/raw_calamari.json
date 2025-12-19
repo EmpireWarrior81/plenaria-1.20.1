@@ -1,0 +1,21 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "plenaria:squid"
+    }
+  ],
+  "result": [
+    {
+      "count": 2,
+      "item": "plenaria:raw_calamari"
+    },
+    {
+      "count": 2,
+      "item": "minecraft:ink_sac"
+    }
+  ],
+  "tool": {
+    "tag": "c:tools/knives"
+  }
+}

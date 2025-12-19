@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "plenaria:chicken_roll_slice"
+    },
+    {
+      "item": "plenaria:chicken_roll_slice"
+    },
+    {
+      "item": "plenaria:chicken_roll_slice"
+    },
+    {
+      "item": "plenaria:tropical_roll"
+    },
+    {
+      "item": "plenaria:tropical_roll"
+    },
+    {
+      "item": "plenaria:tropical_roll"
+    },
+    {
+      "item": "plenaria:pufferfish_roll"
+    },
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "item": "plenaria:pufferfish_roll"
+    }
+  ],
+  "result": {
+    "item": "plenaria:exotic_roll_medley",
+    "count": 1
+  }
+}

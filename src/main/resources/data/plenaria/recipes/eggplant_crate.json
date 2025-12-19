@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "plenaria:eggplant"
+    }
+  },
+  "result": {
+    "item": "plenaria:eggplant_crate",
+    "count": 1
+  }
+}

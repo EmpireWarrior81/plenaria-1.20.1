@@ -2,14 +2,59 @@
   "type": "minecraft:tree",
   "config": {
     "decorators": [],
-
     "dirt_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
         "Name": "minecraft:dirt"
       }
     },
-
+    "foliage_placer": {
+      "type": "minecraft:acacia_foliage_placer",
+      "offset": 0,
+      "radius": 3
+    },
+    "foliage_provider": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "plenaria:avocado_leaves",
+            "Properties": {
+              "distance": "7",
+              "persistent": "false",
+              "waterlogged": "false"
+            }
+          },
+          "weight": 4
+        },
+        {
+          "data": {
+            "Name": "plenaria:fruiting_avocado_leaves",
+            "Properties": {
+              "age": "4",
+              "distance": "7",
+              "persistent": "false",
+              "waterlogged": "false"
+            }
+          },
+          "weight": 1
+        }
+      ]
+    },
+    "force_dirt": false,
+    "ignore_vines": true,
+    "minimum_size": {
+      "type": "minecraft:two_layers_feature_size",
+      "limit": 1,
+      "lower_size": 0,
+      "upper_size": 1
+    },
+    "trunk_placer": {
+      "type": "minecraft:straight_trunk_placer",
+      "base_height": 3,
+      "height_rand_a": 2,
+      "height_rand_b": 0
+    },
     "trunk_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
@@ -18,50 +63,6 @@
           "axis": "y"
         }
       }
-    },
-
-    "trunk_placer": {
-      "type": "minecraft:straight_trunk_placer",
-      "base_height": 4,
-      "height_rand_a": 2,
-      "height_rand_b": 0
-    },
-
-    "foliage_provider": {
-      "type": "minecraft:weighted_state_provider",
-      "entries": [
-        {
-          "data": {
-            "Name": "plenaria:avocado_leaves"
-          },
-          "weight": 4
-        },
-        {
-          "data": {
-            "Name": "plenaria:fruiting_avocado_leaves",
-            "Properties": {
-              "age": "4"
-            }
-          },
-          "weight": 1
-        }
-      ]
-    },
-
-    "foliage_placer": {
-      "type": "minecraft:acacia_foliage_placer",
-      "radius": 3,
-      "offset": 0
-    },
-
-    "minimum_size": {
-      "type": "minecraft:two_layers_feature_size",
-      "limit": 1,
-      "lower_size": 0,
-      "upper_size": 1
-    },
-
-    "ignore_vines": true,
-    "force_dirt": false
+    }
   }
 }

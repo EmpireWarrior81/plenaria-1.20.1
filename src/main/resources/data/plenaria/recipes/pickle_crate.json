@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "plenaria:pickle"
+    }
+  },
+  "result": {
+    "item": "plenaria:pickle_crate",
+    "count": 1
+  }
+}

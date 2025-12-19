@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    { "tag": "c:milks" },
+    { "item": "plenaria:corn_cob" },
+    { "tag": "c:crops/onion" }
+  ],
+  "result": {
+    "item": "plenaria:elote",
+    "count": 1
+  },
+  "container": {
+    "item": "minecraft:stick"
+  },
+  "experience": 1.0,
+  "cookingtime": 200
+}

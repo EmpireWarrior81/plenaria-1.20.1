@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "c:crops/tomato"
+    },
+    {
+      "tag": "plenaria:avocados"
+    },
+    {
+      "item": "plenaria:corn_cob"
+    },
+    {
+      "item": "plenaria:cucumber"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "item": "plenaria:hearty_salad",
+    "count": 1
+  }
+}

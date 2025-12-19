@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "plenaria:tortilla"
+    },
+    {
+      "tag": "plenaria:cooked_porks"
+    },
+    {
+      "item": "minecraft:apple"
+    },
+    {
+      "tag": "c:salad_ingredients/cabbage"
+    }
+  ],
+  "result": {
+    "item": "plenaria:pork_wrap",
+    "count": 1
+  }
+}

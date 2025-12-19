@@ -1,0 +1,21 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "plenaria:avocado"
+    }
+  ],
+  "result": [
+    {
+      "count": 2,
+      "item": "plenaria:cut_avocado"
+    },
+    {
+      "count": 1,
+      "item": "plenaria:avocado_pit"
+    }
+  ],
+  "tool": {
+    "tag": "c:tools/knives"
+  }
+}

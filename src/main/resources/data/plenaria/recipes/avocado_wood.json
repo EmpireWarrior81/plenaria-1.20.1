@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "plenaria:avocado_log"
+    }
+  },
+  "result": {
+    "item": "plenaria:avocado_wood",
+    "count": 3
+  }
+}

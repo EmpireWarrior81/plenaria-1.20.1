@@ -1,0 +1,21 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "plenaria:corn_cob"
+    }
+  ],
+  "result": [
+    {
+      "count": 2,
+      "item": "plenaria:corn_kernels"
+    },
+    {
+      "count": 1,
+      "item": "farmersdelight:straw"
+    }
+  ],
+  "tool": {
+    "tag": "c:tools/knives"
+  }
+}

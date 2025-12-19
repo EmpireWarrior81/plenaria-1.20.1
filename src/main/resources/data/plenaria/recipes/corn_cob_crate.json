@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "plenaria:corn_cob"
+    }
+  },
+  "result": {
+    "item": "plenaria:corn_cob_crate",
+    "count": 1
+  }
+}

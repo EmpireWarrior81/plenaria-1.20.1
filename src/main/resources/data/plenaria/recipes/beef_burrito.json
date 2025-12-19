@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "plenaria:tortilla"
+    },
+    {
+      "tag": "plenaria:cooked_beefs"
+    },
+    {
+      "tag": "plenaria:avocados"
+    },
+    {
+      "item": "farmersdelight:cooked_rice"
+    }
+  ],
+  "result": {
+    "item": "plenaria:beef_burrito",
+    "count": 1
+  }
+}

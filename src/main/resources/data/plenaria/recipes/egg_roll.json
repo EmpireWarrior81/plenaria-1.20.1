@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:dried_kelp"
+    },
+    {
+      "item": "farmersdelight:cooked_rice"
+    },
+    {
+      "tag": "c:foods/cooked_meats/cooked_eggs"
+    },
+    {
+      "tag": "c:foods/cooked_meats/cooked_eggs"
+    }
+  ],
+  "result": {
+    "item": "plenaria:egg_roll",
+    "count": 4
+  }
+}

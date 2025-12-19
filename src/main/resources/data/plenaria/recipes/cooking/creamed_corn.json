@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    { "tag": "c:milks" },
+    { "item": "plenaria:corn_cob" },
+    { "item": "plenaria:corn_cob" }
+  ],
+  "result": {
+    "item": "plenaria:creamed_corn",
+    "count": 1
+  },
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "experience": 1.0,
+  "cookingtime": 200
+}

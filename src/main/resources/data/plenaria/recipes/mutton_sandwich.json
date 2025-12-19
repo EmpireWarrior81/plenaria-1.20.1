@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "c:bread/wheat"
+    },
+    {
+      "tag": "plenaria:cooked_muttons"
+    },
+    {
+      "tag": "c:foods/cooked_meats/cooked_eggs"
+    },
+    {
+      "item": "minecraft:beetroot"
+    }
+  ],
+  "result": {
+    "item": "plenaria:mutton_sandwich",
+    "count": 1
+  }
+}
