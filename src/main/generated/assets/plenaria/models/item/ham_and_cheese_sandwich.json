@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "plenaria:item/ham_and_cheese_sandwich"
+  }
+}
