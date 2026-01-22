@@ -1,0 +1,10 @@
+{
+  "parent": "plenaria:block/cheese_wheel_template2",
+  "textures": {
+    "top": "plenaria:block/flaxen_cheese_wheel_top",
+    "side": "plenaria:block/flaxen_cheese_wheel_side",
+    "inside": "plenaria:block/flaxen_cheese_wheel_inside",
+    "bottom": "plenaria:block/flaxen_cheese_wheel_bottom",
+    "particle": "plenaria:block/flaxen_cheese_wheel_top"
+  }
+}

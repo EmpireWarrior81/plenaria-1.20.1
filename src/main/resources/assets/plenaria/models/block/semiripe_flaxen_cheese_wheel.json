@@ -1,0 +1,9 @@
+{
+  "parent": "plenaria:block/cheese_wheel_template",
+  "textures": {
+    "top": "plenaria:block/semiripe_flaxen_cheese_wheel_top",
+    "side": "plenaria:block/semiripe_flaxen_cheese_wheel_side",
+    "bottom": "plenaria:block/semiripe_flaxen_cheese_wheel_bottom",
+    "particle": "plenaria:block/semiripe_flaxen_cheese_wheel_top"
+  }
+}
