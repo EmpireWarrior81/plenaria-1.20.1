@@ -74,6 +74,28 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.EGGPLANT_PARMESAN, Models.GENERATED);
 
 
+        itemModelGenerator.register(ModItems.FIERY_FONDUE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.VEGETABLE_OMELET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CREAMY_ONION_SOUP, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CHEESY_PASTA, Models.GENERATED);
+        itemModelGenerator.register(ModItems.HORROR_LASAGNA, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SCARLET_PIEROGI, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PIZZA_SLICE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.QUICHE_SLICE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.HAM_AND_CHEESE_SANDWICH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.KIMCHI, Models.GENERATED);
+        itemModelGenerator.register(ModItems.JERKY, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PICKLED_PICKLES, Models.GENERATED);
+        itemModelGenerator.register(ModItems.KIPPERS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COCOA_FUDGE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SWEET_BERRY_JAM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GLOW_BERRY_MARMALADE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.APPLE_JELLY, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FLAXEN_CHEESE_WEDGE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SCARLET_CHEESE_WEDGE, Models.GENERATED);
+
+
+
 
 
         itemModelGenerator.register(ModItems.BRONZE_INGOT, Models.GENERATED);

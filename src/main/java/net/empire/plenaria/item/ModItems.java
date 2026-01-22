@@ -2,15 +2,15 @@ package net.empire.plenaria.item;
 
 import net.empire.plenaria.Plenaria;
 import net.empire.plenaria.block.ModBlocks;
+import net.empire.plenaria.item.custom.JamJarItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.AliasedBlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import vectorwing.farmersdelight.common.item.ConsumableItem;
 
 
 public class  ModItems {
@@ -103,17 +103,21 @@ public class  ModItems {
             new Item(new FabricItemSettings().food(ModFoods.AVOCADO_TOAST)));
 
     public static final Item CREAMED_CORN = registerItem("creamed_corn",
-            new BowlReturningFoodItem(new Item.Settings().food(ModFoods.CREAMED_CORN)));
+            new BowlReturningFoodItem(new Item.Settings().maxCount(16).food(ModFoods.CREAMED_CORN), null));
     public static final Item HEARTY_SALAD = registerItem("hearty_salad",
-            new BowlReturningFoodItem(new Item.Settings().food(ModFoods.HEARTY_SALAD)));
+            new BowlReturningFoodItem(new Item.Settings().maxCount(16).food(ModFoods.HEARTY_SALAD),
+                    "tooltip.plenaria.hearty_salad.nourishment"));
     public static final Item SPICY_CURRY = registerItem("spicy_curry",
-            new BowlReturningFoodItem(new Item.Settings().food(ModFoods.SPICY_CURRY)));
+            new BowlReturningFoodItem(new Item.Settings().maxCount(16).food(ModFoods.SPICY_CURRY),
+                    "tooltip.plenaria.spicy_curry.nourishment"));
     public static final Item POACHED_EGGPLANTS = registerItem("poached_eggplants",
-            new BowlReturningFoodItem(new Item.Settings().food(ModFoods.POACHED_EGGPLANTS)));
+            new BowlReturningFoodItem(new Item.Settings().maxCount(16).food(ModFoods.POACHED_EGGPLANTS),
+                    "tooltip.plenaria.poached_eggplants.nourishment"));
     public static final Item EGGPLANT_PARMESAN = registerItem("eggplant_parmesan",
-            new BowlReturningFoodItem(new Item.Settings().food(ModFoods.EGGPLANT_PARMESAN)));
+            new BowlReturningFoodItem(new Item.Settings().maxCount(16).food(ModFoods.EGGPLANT_PARMESAN),
+                    "tooltip.plenaria.eggplant_parmesan.nourishment"));
     public static final Item EGGPLANT_BURGER = registerItem("eggplant_burger",
-            new BowlReturningFoodItem(new Item.Settings().food(ModFoods.EGGPLANT_BURGER)));
+            new Item(new Item.Settings().food(ModFoods.EGGPLANT_BURGER)));
 
     public static final Item CHICKEN_TACO = registerItem("chicken_taco",
             new Item(new FabricItemSettings().food(ModFoods.CHICKEN_TACO)));
@@ -122,6 +126,67 @@ public class  ModItems {
     public static final Item FISH_TACO = registerItem("fish_taco",
             new Item(new FabricItemSettings().food(ModFoods.FISH_TACO)));
 
+// new part of the mods and is using new method (perhaps better) for registering bowl meals
+
+    public static final Item VEGETABLE_OMELET = registerItem("vegetable_omelet",
+            new ConsumableItem(new FabricItemSettings()
+                    .maxCount(16).food(ModFoods.VEGETABLE_OMELET).recipeRemainder(Items.BOWL), true));
+    public static final Item CREAMY_ONION_SOUP = registerItem("creamy_onion_soup",
+            new ConsumableItem(new FabricItemSettings()
+                    .maxCount(16).food(ModFoods.CREAMY_ONION_SOUP).recipeRemainder(Items.BOWL), true));
+    public static final Item CHEESY_PASTA = registerItem("cheesy_pasta",
+            new ConsumableItem(new FabricItemSettings()
+                    .maxCount(16).food(ModFoods.CHEESY_PASTA).recipeRemainder(Items.BOWL), true));
+    public static final Item HORROR_LASAGNA = registerItem("horror_lasagna",
+            new ConsumableItem(new FabricItemSettings()
+                    .maxCount(16).food(ModFoods.HORROR_LASAGNA).recipeRemainder(Items.BOWL), true));
+    public static final Item SCARLET_PIEROGI = registerItem("scarlet_pierogi",
+            new ConsumableItem(new FabricItemSettings()
+                    .maxCount(16).food(ModFoods.SCARLET_PIEROGI).recipeRemainder(Items.BOWL), true));
+
+    public static final Item FIERY_FONDUE = registerItem("fiery_fondue",
+            new ConsumableItem(new FabricItemSettings()
+            .maxCount(16).food(ModFoods.FIERY_FONDUE).recipeRemainder(Items.BOWL), true));
+
+
+    public static final Item PIZZA_SLICE = registerItem("pizza_slice",
+            new Item(new FabricItemSettings().food(ModFoods.PIZZA_SLICE)));
+    public static final Item QUICHE_SLICE = registerItem("quiche_slice",
+            new Item(new FabricItemSettings().food(ModFoods.QUICHE_SLICE)));
+
+    public static final Item HAM_AND_CHEESE_SANDWICH = registerItem("ham_and_cheese_sandwich",
+            new Item(new FabricItemSettings().food(ModFoods.HAM_AND_CHEESE_SANDWICH)));
+
+    public static final Item KIMCHI = registerItem("kimchi",
+            new Item(new FabricItemSettings().food(ModFoods.KIMCHI)));
+    public static final Item JERKY = registerItem("jerky",
+            new Item(new FabricItemSettings().food(ModFoods.JERKY)));
+    public static final Item PICKLED_PICKLES = registerItem("pickled_pickles",
+            new Item(new FabricItemSettings().food(ModFoods.PICKLED_PICKLES)));
+    public static final Item KIPPERS = registerItem("kippers",
+            new Item(new FabricItemSettings().food(ModFoods.KIPPERS)));
+    public static final Item COCOA_FUDGE = registerItem("cocoa_fudge",
+            new ConsumableItem(new FabricItemSettings().food(ModFoods.COCOA_FUDGE)));
+
+    public static final Item SWEET_BERRY_JAM = registerItem("sweet_berry_jam",
+            new JamJarItem(new FabricItemSettings().maxCount(16).recipeRemainder(Items.GLASS_BOTTLE)
+                    .food(ModFoods.SWEET_BERRY_JAM)));
+    public static final Item GLOW_BERRY_MARMALADE = registerItem("glow_berry_marmalade",
+            new JamJarItem(new FabricItemSettings().maxCount(16).recipeRemainder(Items.GLASS_BOTTLE)
+                    .food(ModFoods.GLOW_BERRY_MARMALADE)));
+    public static final Item APPLE_JELLY = registerItem("apple_jelly",
+            new JamJarItem(new FabricItemSettings().maxCount(16).recipeRemainder(Items.GLASS_BOTTLE)
+                    .food(ModFoods.APPLE_JELLY)));
+
+
+    public static final Item FLAXEN_CHEESE_WEDGE = registerItem("flaxen_cheese_wedge",
+            new Item(new FabricItemSettings().food(ModFoods.FLAXEN_CHEESE)));
+    public static final Item SCARLET_CHEESE_WEDGE = registerItem("scarlet_cheese_wedge",
+            new Item(new FabricItemSettings().food(ModFoods.SCARLET_CHEESE)));
+
+
+    public static final Item TANKARD = registerItem("tankard",
+            new Item(new FabricItemSettings()));
 
     //TODO In near future need to delete these two or add support for the knife with my other mod
 

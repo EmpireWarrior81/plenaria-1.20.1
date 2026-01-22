@@ -1,6 +1,5 @@
 package net.empire.plenaria.block.custom;
 
-import net.empire.plenaria.block.ModBlocks;
 import net.empire.plenaria.item.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CropBlock;
@@ -8,7 +7,6 @@ import net.minecraft.item.ItemConvertible;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
-import net.minecraft.block.Block;
 import net.minecraft.world.BlockView;
 
 public class EggplantsBlock extends CropBlock {

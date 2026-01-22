@@ -128,6 +128,74 @@ public class ModFoods {
                                     FoodValues.LONG_DURATION,
                                     0), 1.0f).build();
 
+    public static final FoodComponent FIERY_FONDUE =
+            new FoodComponent.Builder().hunger(14).saturationModifier(0.75f).statusEffect
+                    (new StatusEffectInstance(
+                            ModEffects.COMFORT.get(), ModFoodValues.VERY_LONG_DURATION,
+                            0), 1.0f).build();
+    public static final FoodComponent VEGETABLE_OMELET =
+            new FoodComponent.Builder().hunger(12).saturationModifier(0.8f).statusEffect
+                    (new StatusEffectInstance(
+                            ModEffects.NOURISHMENT.get(), FoodValues.MEDIUM_DURATION,
+                            0), 1.0f).build();
+    public static final FoodComponent CREAMY_ONION_SOUP =
+            new FoodComponent.Builder().hunger(12).saturationModifier(0.8f).statusEffect
+                    (new StatusEffectInstance(
+                            ModEffects.COMFORT.get(), FoodValues.MEDIUM_DURATION,
+                            0), 1.0f).build();
+    public static final FoodComponent CHEESY_PASTA =
+            new FoodComponent.Builder().hunger(14).saturationModifier(0.75f).statusEffect
+                    (new StatusEffectInstance(
+                            ModEffects.NOURISHMENT.get(), FoodValues.LONG_DURATION,
+                            0), 1.0f).build();
+    public static final FoodComponent HORROR_LASAGNA =
+            new FoodComponent.Builder().hunger(18).saturationModifier(0.55f).statusEffect
+                    (new StatusEffectInstance(
+                            ModEffects.NOURISHMENT.get(), FoodValues.LONG_DURATION,
+                            0), 1.0f).build();
+    public static final FoodComponent SCARLET_PIEROGI =
+            new FoodComponent.Builder().hunger(12).saturationModifier(1.0f).statusEffect
+                    (new StatusEffectInstance(
+                            ModEffects.NOURISHMENT.get(), ModFoodValues.VERY_LONG_DURATION,
+                            0), 1.0f).build();
+
+    public static final FoodComponent PIZZA_SLICE =
+            new FoodComponent.Builder().hunger(5).saturationModifier(1.0f).build();
+    public static final FoodComponent QUICHE_SLICE =
+            new FoodComponent.Builder().hunger(4).saturationModifier(0.8f).build();
+
+    public static final FoodComponent HAM_AND_CHEESE_SANDWICH =
+            new FoodComponent.Builder().hunger(9).saturationModifier(1.0f).build();
+
+    public static final FoodComponent KIMCHI =
+            new FoodComponent.Builder().hunger(2).saturationModifier(0.6f).build();
+    public static final FoodComponent JERKY =
+            new FoodComponent.Builder().hunger(3).saturationModifier(0.7f).build();
+    public static final FoodComponent PICKLED_PICKLES =
+            new FoodComponent.Builder().hunger(4).saturationModifier(0.3f).build();
+    public static final FoodComponent KIPPERS =
+            new FoodComponent.Builder().hunger(6).saturationModifier(0.5f).build();
+
+    public static final FoodComponent COCOA_FUDGE =
+            new FoodComponent.Builder().hunger(4).saturationModifier(0.8f).statusEffect
+                    (new StatusEffectInstance(
+                            StatusEffects.SPEED, ModFoodValues.MINIMAL_DURATION,
+                            0), 1.0f).build();
+
+    public static final FoodComponent SWEET_BERRY_JAM =
+            new FoodComponent.Builder().hunger(4).saturationModifier(0.8f).build();
+    public static final FoodComponent GLOW_BERRY_MARMALADE =
+            new FoodComponent.Builder().hunger(4).saturationModifier(0.8f).build();
+    public static final FoodComponent APPLE_JELLY =
+            new FoodComponent.Builder().hunger(4).saturationModifier(0.8f).build();
+
+    public static final FoodComponent FLAXEN_CHEESE =
+            new FoodComponent.Builder().hunger(4).saturationModifier(1f).build();
+   public static final FoodComponent SCARLET_CHEESE =
+            new FoodComponent.Builder().hunger(4).saturationModifier(1f).build();
+
+
+
 
 
 

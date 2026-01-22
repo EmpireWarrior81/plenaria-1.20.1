@@ -13,9 +13,8 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import vectorwing.farmersdelight.common.block.PieBlock;
 import vectorwing.farmersdelight.common.block.WildCropBlock;
-import vectorwing.farmersdelight.common.block.FeastBlock;
-import vectorwing.farmersdelight.common.block.RiceRollMedleyBlock;
 
 
 public class ModBlocks {
@@ -44,16 +43,13 @@ public class ModBlocks {
     public static final Block CORN_UPPER = registerBlockWithoutItem("corn_upper",
             new CornUpperBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
 
-    public static final Block EXOTIC_ROLL_MEDLEY = registerBlock("exotic_roll_medley",
-            new ExoticRollMedleyBlock(
-                    FabricBlockSettings.copyOf(vectorwing.farmersdelight.common.registry.ModBlocks.RICE_ROLL_MEDLEY_BLOCK.get()),
-                    () -> ModItems.PUFFERFISH_ROLL, true));
+    public static final Block EXOTIC_ROLL_MEDLEY = registerBlockWithMaxCount("exotic_roll_medley",
+            new ExoticRollMedleyBlock(FabricBlockSettings.copyOf(vectorwing.farmersdelight.common.registry.ModBlocks.RICE_ROLL_MEDLEY_BLOCK.get()),
+                    () -> ModItems.PUFFERFISH_ROLL, true), 1);
 
-
-    public static final Block EGGPLANT_PARMESAN_BLOCK = registerBlock("eggplant_parmesan_block",
-            new EggplantFeastBlock(
-                    FabricBlockSettings.copyOf(vectorwing.farmersdelight.common.registry.ModBlocks.ROAST_CHICKEN_BLOCK.get()),
-                    () -> ModItems.EGGPLANT_PARMESAN, true));
+    public static final Block EGGPLANT_PARMESAN_BLOCK = registerBlockWithMaxCount("eggplant_parmesan_block",
+            new EggplantFeastBlock(FabricBlockSettings.copyOf(vectorwing.farmersdelight.common.registry.ModBlocks.ROAST_CHICKEN_BLOCK.get()),
+                    () -> ModItems.EGGPLANT_PARMESAN, true), 1);
 
 
     public static final Block AVOCADO_LOG = registerBlock("avocado_log",
@@ -90,6 +86,28 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(vectorwing.farmersdelight.common.registry.ModBlocks.CARROT_CRATE.get())));
 
 
+    public static final Block FIERY_FONDUE_POT = registerBlockWithMaxCount("fiery_fondue_pot",
+            new FieryFonduePotBlock(FabricBlockSettings.copyOf(Blocks.CAULDRON)), 1);
+
+    public static final Block PIZZA = registerBlockWithMaxCount("pizza",
+            new PizzaBlock(FabricBlockSettings.copyOf(Blocks.CAKE)), 1);
+
+    public static final Block QUICHE = registerBlockWithMaxCount("quiche",
+            new PieBlock(FabricBlockSettings.copyOf(Blocks.CAKE), () -> ModItems.QUICHE_SLICE), 1);
+
+
+    public static final Block FLAXEN_CHEESE_WHEEL = registerBlockWithMaxCount("flaxen_cheese_wheel",
+            new CheeseWheelBlock(FabricBlockSettings.copyOf(Blocks.CAKE), () -> ModItems.FLAXEN_CHEESE_WEDGE), 16);
+
+    public static final Block UNRIPE_FLAXEN_CHEESE_WHEEL = registerBlockWithMaxCount("unripe_flaxen_cheese_wheel",
+            new UnripeCheeseWheelBlock(FabricBlockSettings.copyOf(Blocks.CAKE), () -> ModBlocks.FLAXEN_CHEESE_WHEEL), 16);
+
+    public static final Block SCARLET_CHEESE_WHEEL = registerBlockWithMaxCount("scarlet_cheese_wheel",
+            new CheeseWheelBlock(FabricBlockSettings.copyOf(Blocks.CAKE), () -> ModItems.SCARLET_CHEESE_WEDGE), 16);
+
+    public static final Block UNRIPE_SCARLET_CHEESE_WHEEL = registerBlockWithMaxCount("unripe_scarlet_cheese_wheel",
+            new UnripeCheeseWheelBlock(FabricBlockSettings.copyOf(Blocks.CAKE), () -> ModBlocks.SCARLET_CHEESE_WHEEL), 16);
+
      private static Block registerBlock(String name, Block block) {
          Block registered = Registry.register(Registries.BLOCK, new Identifier(Plenaria.MOD_ID, name), block);
          Registry.register(Registries.ITEM, new Identifier(Plenaria.MOD_ID, name), new BlockItem(registered, new Item.Settings()));
@@ -101,10 +119,18 @@ public class ModBlocks {
         return block;
     }
 
-
-    private static Item registerBlockItem(String name, Block block) {
-        return Registry.register(Registries.ITEM, new Identifier(Plenaria.MOD_ID, name),
-                new BlockItem(block, new FabricItemSettings()));
+    private static Block registerBlockWithMaxCount(String name, Block block, int maxCount) {
+        Block registered = Registry.register(
+                Registries.BLOCK,
+                new Identifier(Plenaria.MOD_ID, name),
+                block
+        );
+        Registry.register(
+                Registries.ITEM,
+                new Identifier(Plenaria.MOD_ID, name),
+                new BlockItem(registered, new FabricItemSettings().maxCount(maxCount))
+        );
+        return registered;
     }
 
     public static void registerModBlocks(){

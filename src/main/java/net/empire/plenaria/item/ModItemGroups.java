@@ -12,9 +12,9 @@ import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
 
-    public static final ItemGroup ARTIFACTS_GROUP = Registry.register(Registries.ITEM_GROUP,
+    public static final ItemGroup CULTURALDELIGHT_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(Plenaria.MOD_ID, "plenaria"),
-            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.plenaria"))
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.plenaria.culturaldelight"))
                     .icon(() -> new ItemStack(ModItems.AVOCADO)).entries((displayContext, entries) -> {
                         entries.add(ModItems.AVOCADO);
                         entries.add(ModItems.CUCUMBER);
@@ -25,7 +25,7 @@ public class ModItemGroups {
                         entries.add(ModItems.SMOKED_WHITE_EGGPLANT);
                         entries.add(ModItems.WHITE_EGGPLANT);
                         entries.add(ModItems.CORN_COB);
-                        entries.add(ModItems.GINGER);
+                   //     entries.add(ModItems.GINGER); note: adding this later, when having a wild plant texture
                         entries.add(ModItems.SQUID);
                         entries.add(ModItems.COOKED_SQUID);
                         entries.add(ModItems.GLOW_SQUID);
@@ -66,6 +66,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.EXOTIC_ROLL_MEDLEY);
                         entries.add(ModBlocks.EGGPLANT_PARMESAN_BLOCK);
                         entries.add(ModBlocks.WILD_CORN);
+                        entries.add(ModBlocks.WILD_CORN_DRY);
                         entries.add(ModBlocks.WILD_EGGPLANTS);
                         entries.add(ModBlocks.WILD_CUCUMBERS);
                         entries.add(ModBlocks.AVOCADO_PIT);
@@ -85,6 +86,31 @@ public class ModItemGroups {
                         entries.add(ModBlocks.WHITE_EGGPLANT_CRATE);
 
                     }).build());
+
+
+    public static final ItemGroup BREWIN_GROUP = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(Plenaria.MOD_ID, "brewinandchewin"),
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.plenaria.brewinandchewin"))
+                    .icon(() -> new ItemStack(ModItems.FIERY_FONDUE)).entries((displayContext, entries) -> {
+                        entries.add(ModItems.FIERY_FONDUE);
+
+                        entries.add(ModItems.FLAXEN_CHEESE_WEDGE);
+                        entries.add(ModItems.SCARLET_CHEESE_WEDGE);
+                        entries.add(ModBlocks.SCARLET_CHEESE_WHEEL);
+                        entries.add(ModBlocks.FLAXEN_CHEESE_WHEEL);
+                        entries.add(ModBlocks.UNRIPE_FLAXEN_CHEESE_WHEEL);
+                        entries.add(ModBlocks.UNRIPE_SCARLET_CHEESE_WHEEL);
+                        entries.add(ModBlocks.FIERY_FONDUE_POT);
+
+
+
+                        entries.add(ModBlocks.QUICHE);
+                        entries.add(ModBlocks.PIZZA);
+
+                    }).build());
+
+
+
 
 public static void registerItemGroups() {
     Plenaria.LOGGER.info("Registering Item Groups for " + Plenaria.MOD_ID);

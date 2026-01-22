@@ -1,16 +1,24 @@
 package net.empire.plenaria.item;
 
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
+import net.minecraft.text.Text;
+
+import java.util.List;
 
 public class BowlReturningFoodItem extends Item {
 
-    public BowlReturningFoodItem(Settings settings) {
+    private final String tooltipKey;
+
+    public BowlReturningFoodItem(Settings settings, String tooltipKey) {
         super(settings);
+        this.tooltipKey = tooltipKey;
     }
 
     @Override
@@ -29,4 +37,13 @@ public class BowlReturningFoodItem extends Item {
 
         return result;
     }
+    @Override
+    public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
+        super.appendTooltip(stack, world, tooltip, context);
+
+        if (tooltipKey != null && !tooltipKey.isEmpty()) {
+            tooltip.add(Text.translatable(tooltipKey).formatted(Formatting.BLUE));
+        }
+    }
+
 }
