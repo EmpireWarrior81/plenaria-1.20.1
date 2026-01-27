@@ -1,6 +1,7 @@
 package net.empire.plenaria.particle;
 
 import net.empire.plenaria.Plenaria;
+import net.empire.plenaria.particle.custom.DrunkBubbleParticleOptions;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.particle.ParticleType;
@@ -12,7 +13,8 @@ public class ModParticleTypes {
 
     public static final DefaultParticleType FOG = FabricParticleTypes.simple();
 
-    public static final DefaultParticleType DRUNK_BUBBLE = FabricParticleTypes.simple();
+    public static final ParticleType<DrunkBubbleParticleOptions> DRUNK_BUBBLE = FabricParticleTypes.complex(false,
+            DrunkBubbleParticleOptions.FACTORY);
 
     public static void registerParticles() {
         Registry.register(Registries.PARTICLE_TYPE, new Identifier(Plenaria.MOD_ID, "fog"), FOG);

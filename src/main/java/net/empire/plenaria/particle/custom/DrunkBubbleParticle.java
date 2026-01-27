@@ -1,9 +1,6 @@
 package net.empire.plenaria.particle.custom;
 
 import net.minecraft.client.particle.*;
-import net.minecraft.client.render.BufferBuilder;
-import net.minecraft.client.render.Tessellator;
-import net.minecraft.client.texture.TextureManager;
 import net.minecraft.client.world.ClientWorld;
 
 public class DrunkBubbleParticle extends SpriteBillboardParticle  {
@@ -18,7 +15,7 @@ public class DrunkBubbleParticle extends SpriteBillboardParticle  {
         this.velocityMultiplier = 3.0E-6F;
         this.velocityX = motionX;
         this.velocityY = motionY + ((double) this.random.nextFloat() / 500.0D);
-        this.velocityY = motionZ;
+        this.velocityZ = motionZ;
     }
 
     @Override
@@ -48,19 +45,16 @@ public class DrunkBubbleParticle extends SpriteBillboardParticle  {
     }
 
     public static class Factory implements ParticleFactory<DrunkBubbleParticleOptions> {
-
         private final SpriteProvider spriteProvider;
 
-        public Factory(SpriteProvider spriteProvider) {
-            this.spriteProvider = spriteProvider;
-        }
+        public Factory(SpriteProvider spriteProvider) {this.spriteProvider = spriteProvider;}
 
         @Override
         public Particle createParticle(DrunkBubbleParticleOptions options, ClientWorld world, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) {
             DrunkBubbleParticle particle = new DrunkBubbleParticle(world, x, y + 0.3D, z, 0.0, 0.002, 0.0);
             particle.setAlpha(0.6F);
-            particle.setColor(options.color().x, options.getColor().y, options.getColor().z);
-            particle.scale(options.getScale());
+            particle.setColor(options.color().x, options.color().y, options.color().z);
+            particle.scale(options.scale());
             particle.setSprite(this.spriteProvider);
             return particle;
         }

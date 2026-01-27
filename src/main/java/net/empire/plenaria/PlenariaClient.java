@@ -24,5 +24,7 @@ public class PlenariaClient implements ClientModInitializer {
 
         ParticleFactoryRegistry.getInstance().register(ModParticleTypes.FOG, FlameParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(ModParticleTypes.DRUNK_BUBBLE, DrunkBubbleParticle.Factory::new);
+
     }
 }
+
